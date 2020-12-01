@@ -14,11 +14,11 @@ import time
 import clx.xms
 import requests
 
-client = clx.xms.Client(service_plan_id='bbf28c598d0d435fa566cc11f44ab1be', token='b34b08f442a84bdc8523685b7b539258')
+client = clx.xms.Client(service_plan_id='XXX', token='XXX')
 
 create = clx.xms.api.MtBatchTextSmsCreate()
 create.sender = '447537404817'
-create.recipients = {'5561991155786'}
+create.recipients = {'XXXXXXXXXX'}
 #print('SMS')
 
 ### Write to gsheets setup
@@ -35,7 +35,8 @@ credentials = ServiceAccountCredentials.from_json_keyfile_name(
 
 gc = gspread.authorize(credentials)
 
-wks = gc.open_by_url("https://docs.google.com/spreadsheets/d/1DWm0sZUQXHQ8AY-x3KQpdzw9hkL6QLKVe0QTH68v8IU/edit#gid=0")
+SHEET_KEY = XXXXX
+wks = gc.open_by_url(f"https://docs.google.com/spreadsheets/d/{SHEET_KEY}/edit#gid=0")
 #print('GSPREAD')
 
 
