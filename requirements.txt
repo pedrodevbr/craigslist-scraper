@@ -1,0 +1,5 @@
+selenium
+webdriver_manager
+fake_useragent
+gspread
+oauth2client
